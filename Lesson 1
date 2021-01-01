@@ -1,0 +1,18 @@
+Numpy Colab Notebook:
+https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/python-colab.ipynb#scrollTo=pAPOoqy5L9iV
+
+Important Ideas:
+We want to stop doing loops. Loops in python are slow.
+Operations with ufuncs (overloading operators) are efficient.
+Broadcasting to perform operations on entire vectors!
+Fancy indexing and slicing is useful for creating filters, with boolean indexing, etc.
+This video sums it up great: https://www.youtube.com/watch?v=EEUXKG97YRw&ab_channel=PyCon2015
+
+
+Lectures:
+https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+
+Site:
+https://cs231n.github.io/
+
+Need to deal with Google Cloud Setup when I start working on bigger things. For now, Colab will suffice.

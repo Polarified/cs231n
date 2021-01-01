@@ -1,0 +1,22 @@
+Linear Classification:
+We take an image (for ex. 32*32*3 (3072), pass it through a function f(x, W) x is the image and W are the parameters/weights, and we return a list of N scores for N different classes.
+We then learn the weights, and those are what we keep and move on to testing with.
+
+A linear classifier is a function where: f(x, W) = Wx (+ b).
+In our example, we want to return a vector of shape 10x1. With x of the shape 3072x1, we need W of the shape 10x3072.
+b is a bias, of the shape 10x1. Simply added onto the result to give it a certain bias.
+
+We do a dot product of W(matrix) and x, then add the b vector.
+The way we do a dot product between a matrix and a vector is:
+https://mathinsight.org/matrix_vector_multiplication#:~:text=The%20first%20component%20of%20the,a%20dot%20product%20in%20disguise.&text=and%20x%3D(2%2C1,%3D%5B1%E2%88%923%5D.
+
+We can visualize linear classifiers as lines / planes separating the space into classes.
+We can think up some tough cases for a linear classifier, like a class where the number of pixels > 0 is odd vs the class where the number of pixels > 0 is even.
+That would end up being a ++ -- vs +- -+ example, where there is no single line that can classify well.
+
+We haven't discussed how to choose which W is good. That involves:
+* Quantifying what it means to have a good W
+* Starting with random W and finding W that minimizes loss
+* Tweaking the functional form of f
+
+

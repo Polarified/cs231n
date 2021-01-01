@@ -1,0 +1,27 @@
+NN Classifier:
+We define location in the space, then define how to measure distance between locations.
+We then can find the point with the minimum distance, the nearest neighbor, and use it's label.
+
+KNN:
+One neighbor usually isn't a great predictor.
+We can choose the K nearest neighbors and take a majority vote to find the appropriate label.
+
+Distance Metrics:
+We can use L1 (absolute difference between the matching pixels, summed)
+Or L2 (Squared difference between matching pixels, summed, then taken the square root).
+Each distance metric gives us something different.
+
+Site to play with: http://vision.stanford.edu/teaching/cs231n-demos/knn/
+Contains source code in knn.js
+
+Hyperparameters and Validation sets:
+What is the best value of k? Which distance metric should we use?
+Let's try it and tune after trying.
+But we only try on a part of the training set - never on the test set! We will fit to the specific testing data we have, instead of generalizing.
+Cross Validation: we split the training into pieces, and do a few rounds where each time a different piece of the training data is the validation set. Then we average the results.
+This is costly and not used too much in deep learning.
+
+Why not use KNN?
+* Focuses too much on background
+* Fast to train, slow to test
+* Very different images can all have the same distance from an image, even while they themselves aren't closely related.
